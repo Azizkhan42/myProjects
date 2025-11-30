@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Responsive Image Gallery with Lightbox & Filters</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Simple Responsive Image Gallery</h1>
+        <div class="controls">
+          <div class="filters" id="filters">
+            <button class="btn active" data-cat="all">All</button>
+            <button class="btn" data-cat="nature">Nature</button>
+            <button class="btn" data-cat="city">City</button>
+            <button class="btn" data-cat="people">People</button>
+          </div>
+        </div>
+      </header>
+
+      <div
+        style="
+          margin-bottom: 12px;
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          justify-content: flex-end;
+        "
+        class="nav-controls"
+      >
+        <button id="applyGray">Grayscale</button>
+        <button id="applySepia">Sepia</button>
+        <button id="applyBright">Bright</button>
+        <button id="clearFilters">Clear Filters</button>
+      </div>
+
+      <!-- Gallery: take images in HTML as requested -->
+      <div class="gallery" id="gallery">
+        <div class="card" data-category="nature">
+          <span class="tag">Nature</span>
+          <img src="images/img1.jpg" alt="Mountain" />
+          <div class="caption">Snowy Mountain</div>
+        </div>
+
+        <div class="card" data-category="city">
+          <span class="tag">City</span>
+          <img src="images/img2.jpg" alt="City street" />
+          <div class="caption">Downtown at night</div>
+        </div>
+
+        <div class="card" data-category="people">
+          <span class="tag">People</span>
+          <img src="images/img3.jpg" alt="Portrait" />
+          <div class="caption">Smiling portrait</div>
+        </div>
+
+        <div class="card" data-category="nature">
+          <span class="tag">Nature</span>
+          <img src="images/img4.jpg" alt="Lake" />
+          <div class="caption">Serene lake</div>
+        </div>
+
+        <div class="card" data-category="city">
+          <span class="tag">City</span>
+          <img src="images/img5.jpg" alt="Bridge" />
+          <div class="caption">Bridge silhouette</div>
+        </div>
+
+        <div class="card" data-category="people">
+          <span class="tag">People</span>
+          <img src="images/img6.jpg" alt="Group" />
+          <div class="caption">Friends</div>
+        </div>
+
+        <div class="card" data-category="nature">
+          <span class="tag">Nature</span>
+          <img src="images/img7.jpg" alt="Forest" />
+          <div class="caption">Forest path</div>
+        </div>
+
+        <div class="card" data-category="city">
+          <span class="tag">City</span>
+          <img src="images/img8.jpg" alt="Skyscraper" />
+          <div class="caption">Modern skyline</div>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+          <button class="close" id="lbClose">✕</button>
+          <button class="prev" id="lbPrev">◀</button>
+          <img id="lbImage" src="" alt="" />
+          <button class="next" id="lbNext">▶</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
